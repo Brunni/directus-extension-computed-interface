@@ -127,10 +127,10 @@ export default defineComponent({
 
 				errorMsg.value = null;
 
-				if (['integer', 'decimal', 'bigInteger'].includes(props.type)) {
+				if (['integer', 'bigInteger'].includes(props.type)) {
 					return parseInt(res) || 0;
 				}
-				if (['float'].includes(props.type)) {
+				if (['float', 'decimal'].includes(props.type)) {
 					return parseFloat(res) || 0;
 				}
 				return res;
